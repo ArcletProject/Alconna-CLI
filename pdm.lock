@@ -1,0 +1,54 @@
+[[package]]
+name = "arclet-alconna"
+version = "1.2.0.1"
+requires_python = ">=3.8"
+summary = "A High-performance, Generality, Humane Command Line Arguments Parser Library."
+dependencies = [
+    "nepattern~=0.1.2",
+    "typing-extensions~=4.3.0",
+]
+
+[[package]]
+name = "cli-lite"
+version = "0.2.0"
+requires_python = ">=3.8"
+summary = "A simple framework to build a cli tool, base on Alconna"
+dependencies = [
+    "arclet-alconna>=1.2.0",
+]
+
+[[package]]
+name = "nepattern"
+version = "0.1.2"
+requires_python = ">=3.8"
+summary = "a complex pattern, support typing"
+dependencies = [
+    "typing-extensions~=4.3.0",
+]
+
+[[package]]
+name = "typing-extensions"
+version = "4.3.0"
+requires_python = ">=3.7"
+summary = "Backported and Experimental Type Hints for Python 3.7+"
+
+[metadata]
+lock_version = "4.0"
+content_hash = "sha256:a772967cf0310ddcf6ce7709707df8aa7a30e65831cee46ec7a92324951b48a1"
+
+[metadata.files]
+"arclet-alconna 1.2.0.1" = [
+    {url = "https://files.pythonhosted.org/packages/54/c2/370078a926cc8a7ae95a7f9d00e1be39bd3b6db5d04876116835d389176d/arclet_alconna-1.2.0.1-py3-none-any.whl", hash = "sha256:ebb2c7656bd0c6d1322ad66c2037c830916bf2dc84f592c273e032e12b643aeb"},
+    {url = "https://files.pythonhosted.org/packages/fa/9d/afeb480260453aeaa2195683883bc0f68df9d35d9513e228ff5c7ece4ae0/arclet-alconna-1.2.0.1.tar.gz", hash = "sha256:2a16116a2bb4cddda44085eb2a56cb31d10397c111012517d864f7c0c338646f"},
+]
+"cli-lite 0.2.0" = [
+    {url = "https://files.pythonhosted.org/packages/55/16/c7fcad94b082451199fb3405ef5284d702cdd3cf71d49358f2e4701e97a2/cli_lite-0.2.0-py3-none-any.whl", hash = "sha256:a7ce37416435715ce68bc20a887440db85a884f47358e95c0333830764ee5493"},
+]
+"nepattern 0.1.2" = [
+    {url = "https://files.pythonhosted.org/packages/23/2e/a3b007a2214a9bb1de1680234bcfe63c29c89db12f88a5a966f746668e03/nepattern-0.1.2.tar.gz", hash = "sha256:a4a8dcc6e9be6f04a42b61e3c411a544cee85c3039279fc049d64748f656fc8e"},
+    {url = "https://files.pythonhosted.org/packages/2e/a8/b08824944f8d15de8a25841a56ff4b4def7fd813aa487db3aabc1d851658/nepattern-0.1.2-py3-none-any.whl", hash = "sha256:2cea4933c1ad25dd06558084ae1f73ef0c909eeb1e5f7a2ec27a86018b50c59f"},
+]
+"typing-extensions 4.3.0" = [
+    {url = "https://files.pythonhosted.org/packages/9e/1d/d128169ff58c501059330f1ad96ed62b79114a2eb30b8238af63a2e27f70/typing_extensions-4.3.0.tar.gz", hash = "sha256:e6d2677a32f47fc7eb2795db1dd15c1f34eff616bcaf2cfb5e997f854fa1c4a6"},
+    {url = "https://files.pythonhosted.org/packages/ed/d6/2afc375a8d55b8be879d6b4986d4f69f01115e795e36827fd3a40166028b/typing_extensions-4.3.0-py3-none-any.whl", hash = "sha256:25642c956049920a5aa49edcdd6ab1e06d7e5d467fc00e0506c44ac86fbfca02"},
+]
