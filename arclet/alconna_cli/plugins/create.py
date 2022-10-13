@@ -9,7 +9,7 @@ args_type = BasePattern(
     r"(\[.+])*",
     PatternModel.REGEX_CONVERT,
     list,
-    lambda x: [re.split("[:=]", p) for p in re.findall(r"\[(.*?)]", x)],
+    lambda _, x: [re.split("[:=]", p) for p in re.findall(r"\[(.*?)]", x)],
 )
 
 
