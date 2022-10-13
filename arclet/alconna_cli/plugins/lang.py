@@ -6,14 +6,12 @@ class Lang(BasePlugin):
     def _init_plugin(self) -> Alconna:
         return Alconna(
             "lang",
-            options=[
-                Option("--list", help_text="展示所有支持的语言类型"),
-                Option(
-                    "--set-default|-S",
-                    Args["lang", str, ArgField(completion=lambda: "比如 zh-CN")],
-                    help_text="设置默认使用的语言类型",
-                ),
-            ],
+            Option("--list", help_text="展示所有支持的语言类型"),
+            Option(
+                "--set-default|-S",
+                Args["lang", str, ArgField(completion=lambda: "比如 zh-CN")],
+                help_text="设置默认使用的语言类型",
+            ),
             meta=CommandMeta("语言配置相关功能")
         )
 

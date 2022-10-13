@@ -19,10 +19,8 @@ class Cache(BasePlugin):
             self.data = {}
         return Alconna(
             "cache",
-            options=[
-                Option("clear", help_text="清理缓存"),
-                Option("show", help_text="显示内容")
-            ],
+            Option("clear", help_text="清理缓存"),
+            Option("show", help_text="显示内容"),
             meta=CommandMeta("管理缓存")
         )
 

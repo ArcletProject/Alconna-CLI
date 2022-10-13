@@ -17,25 +17,21 @@ class Create(BasePlugin):
     def _init_plugin(self) -> Alconna:
         return Alconna(
             "create",
-            options=[
-                Option("--command", Args["command_name", str], help_text="指定命令名称"),
-                Option(
-                    "--header", Args["command_header", List[str]], help_text="传入命令头"
-                ),
-                Option(
-                    "--args",
-                    Args["main_args", args_type, ArgField(default_factory=list)],
-                    help_text="传入主参数",
-                ),
-                Option(
-                    "--option",
-                    Args["option_name", str][
-                        "option_args", args_type, ArgField(default_factory=list)
-                    ],
-                    help_text="创建命令选项",
-                ),
-                Option("--analysed|-A", help_text="从已经分析的命令结构中创建Alconna"),
-            ],
+            Option("--command", Args["command_name", str], help_text="指定命令名称"),
+            Option("--header", Args["command_header", List[str]], help_text="传入命令头"),
+            Option(
+                "--args",
+                Args["main_args", args_type, ArgField(default_factory=list)],
+                help_text="传入主参数",
+            ),
+            Option(
+                "--option",
+                Args["option_name", str][
+                    "option_args", args_type, ArgField(default_factory=list)
+                ],
+                help_text="创建命令选项",
+            ),
+            Option("--analysed|-A", help_text="从已经分析的命令结构中创建Alconna"),
             meta=CommandMeta("开始创建 Alconna 命令"),
         )
 
@@ -87,7 +83,6 @@ class Create(BasePlugin):
         cache.data["create"] = construct_command
         cache.save()
         return
-
 
     def dispatch(self, result: Arpamar):
         cache = CommandLine.current().get_plugin(Cache)
